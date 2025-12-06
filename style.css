@@ -12,7 +12,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Container geral */
 section {
   padding: 60px 25px;
   display: none;
@@ -29,7 +28,6 @@ section.active {
   transform: translateY(0);
 }
 
-/* Cabeçalho */
 header {
   padding: 20px;
   background-color: #ffffff;
@@ -40,7 +38,6 @@ header {
   z-index: 50;
 }
 
-/* Botões – VERDE ÁGUA */
 button {
   margin: 8px;
   padding: 10px 20px;
@@ -64,7 +61,6 @@ button:active {
   opacity: .95;
 }
 
-/* Cards / blocos */
 .card {
   background: white;
   padding: 25px;
@@ -73,7 +69,6 @@ button:active {
   margin-bottom: 25px;
 }
 
-/* Imagens ajustadas */
 img {
   width: 100%;
   height: auto;
@@ -81,7 +76,6 @@ img {
   object-fit: cover;
 }
 
-/* Botão do WhatsApp – VERDE ÁGUA */
 .botao-wpp {
   display: inline-block;
   position: fixed;
@@ -107,7 +101,6 @@ img {
   opacity: .95;
 }
 
-/* Responsividade */
 @media (max-width: 600px) {
 
   button {
