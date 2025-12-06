@@ -11,3 +11,21 @@ h1 {
   font-style: oblique;
   color: rgb(0, 0, 0);
 }
+
+button {
+    background-color: #0b0763;
+    color: rgb(145, 163, 247);
+    font-family: "Bai Jamjuree", sans-serif;
+}
+
+.passo {
+    display: none;
+}
+
+.passo.ativo {
+    display: block;
+}
+
+img {
+    max-width: 70%;
+}
