@@ -1,100 +1,125 @@
-body { 
-  background-color: #eef4f4;
-  font-family: Arial, sans-serif;
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
-  text-align: center;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
   color: #222;
+  overflow-x: hidden;
 }
 
-.topo {
-  padding: 20px;
-  max-width: 700px;
-  margin: auto;
-}
-
-h1 {
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-.botao-wpp {
-  display: inline-block;
-  margin-top: 10px;
-  background: #0b0763;
-  padding: 10px 20px;
-  border-radius: 6px;
-  color: white;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.botao-wpp:hover {
-  opacity: 0.8;
-}
-
-/* passos */
-.passo {
+/* Container geral */
+section {
+  padding: 60px 25px;
   display: none;
+  max-width: 900px;
+  margin: auto;
   opacity: 0;
-  transition: opacity .2s ease-in-out;
-  max-width: 700px;
-  margin: 30px auto;
+  transform: translateY(15px);
+  transition: opacity .4s ease, transform .4s ease;
 }
 
-.passo.ativo {
+section.active {
   display: block;
   opacity: 1;
+  transform: translateY(0);
 }
 
-/* fade-out */
-.fade-out {
-  opacity: 0 !important;
+/* Cabeçalho */
+header {
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
 
-/* botões */
+/* Botões – VERDE ÁGUA */
 button {
   margin: 8px;
   padding: 10px 20px;
-  background-color: #1c1a78;
+  background-color: #bff6ea; /* verde-água clarinho */
   border: none;
-  color: white;
+  color: #064c47;
   border-radius: 6px;
   cursor: pointer;
-  transition: .2s;
+  transition: background-color .18s ease, transform .12s ease;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 button:hover {
-  opacity: 0.85;
+  background-color: #9eead9;
+  transform: translateY(-2px);
 }
 
-/* imagens */
-.img-fixa {
-  width: 280px;
-  height: 280px;
-  object-fit: cover;
+button:active {
+  transform: translateY(0);
+  opacity: .95;
+}
+
+/* Cards / blocos */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  margin-bottom: 25px;
+}
+
+/* Imagens ajustadas */
+img {
+  width: 100%;
+  height: auto;
   border-radius: 10px;
-  margin: 8px;
-  transition: .2s;
+  object-fit: cover;
 }
 
-.img-fixa:hover {
-  transform: scale(1.02);
+/* Botão do WhatsApp – VERDE ÁGUA */
+.botao-wpp {
+  display: inline-block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #bff6ea;
+  color: #064c47;
+  padding: 14px 16px;
+  border-radius: 50%;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: background-color .18s ease, transform .12s ease;
 }
 
-/* responsividade */
+.botao-wpp:hover {
+  background-color: #9eead9;
+  transform: scale(1.08);
+}
+
+.botao-wpp:active {
+  transform: scale(1);
+  opacity: .95;
+}
+
+/* Responsividade */
 @media (max-width: 600px) {
-  .img-fixa {
-    width: 90%;
-    height: auto;
-  }
 
   button {
-    width: 90%;
+    width: 100%;
+    margin: 6px 0;
+  }
+
+  section {
+    padding: 50px 18px;
+  }
+
+  header {
+    padding: 15px 10px;
   }
 }
